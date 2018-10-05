@@ -71,8 +71,20 @@ void printArray(structure arr[], lld n)
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
-
+    
+    //Example
+    int n = 10;//size of array
+    structure arr[n+1];
+    //initializing array
+    for(int i=0;i<10;i++)
+    {
+        arr[i].gate = i;
+        arr[i].father = n-i;
+    }
+    //Calling heapSort function to sort the array
+    heapSort(arr,n);
+    //printing the array
+    printArray(arr,n);
 
     return 0;
 }
