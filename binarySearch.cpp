@@ -17,6 +17,7 @@ int binarySearch(int arr[], int l, int r, int x)
         // If x is smaller, ignore right half
         else
             r = m - 1;
+
     }
 
     // if we reach here, then element was 

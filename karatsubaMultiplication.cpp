@@ -77,6 +77,8 @@ string karatsuba(string s1, string s2){
         z2.append("0");
     }
 
+    
+
     string ans = stringAddition(stringAddition((karatsuba(a, c).append(z1)),(stringAddition(karatsuba(a,d), karatsuba(b,c)).append(z2))),karatsuba(b,d));
     lld pos;
     for(int i = 0;i < ans.length(); ++i){
