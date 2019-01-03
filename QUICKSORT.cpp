@@ -4,8 +4,6 @@ Aaaye mera solution dekhne aaye ho... bdia hai... :P
 Swaagat hai aap logo ka!!
 */
 
-//Merge Sort With Pivot Element As Median of first, last and middle element
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,57 +16,49 @@ typedef long ld;
 typedef long double ldo;
 typedef pair<lld, lld> pll;
 
-lld ans = 0;
-
 lld partition(lld arr[], lld l, lld r){
-    lld p = arr[l];
-    lld i = l+1;
+    lld pivot = arr[l];
+    lld i = l;
 
     for(lld j = l+1; j <= r; ++j){
-        if(arr[j] <= p){
-            swap(arr[j], arr[i]);
+        if(arr[j] < pivot){
             i++;
+            swap(arr[j], arr[i]);
         }
     }
-
-    swap(arr[l], arr[i-1]);
-    return (i-1);
+    swap(arr[l],arr[i]);
+    return i;
 }
 
 void quickSort(lld arr[], lld l, lld r){
-    if(l >= r){
-        return;
-    }else {
-
-        swap(arr[l], arr[r]);
-        ans += (r - l);
-
+    if(r>l){
         lld p = partition(arr, l, r);
 
-        quickSort(arr, l, p - 1);
-        quickSort(arr, p + 1, r);
+        quickSort(arr, l, p-1);
+        quickSort(arr, p+1, r);
+    }
+}
+
+void printArray(lld arr[], lld n){
+    for(lld i = 0; i < n; ++i){
+        cout<<arr[i]<<"\n";
     }
 }
 
 int main(){
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    lld i,arr[10000];
-
-    for(i=0;i<10000;++i){
-        cin>>arr[i];
+    lld t,i,ar[100000];
+    cin>>t;
+    for(i=0;i<t;++i){
+        cin>>ar[i];
     }
 
-    quickSort(arr, 0, 9999);
+    quickSort(ar, 0, t-1);
 
-    cout<<ans;
+    printArray(ar, t);
 
     return 0;
 }
-
-
