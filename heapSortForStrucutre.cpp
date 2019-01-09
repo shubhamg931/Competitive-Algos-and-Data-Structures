@@ -78,8 +78,9 @@ int main(){
     //initializing array
     for(int i=0;i<10;i++)
     {
-        arr[i].gate = i;
-        arr[i].father = n-i;
+        arr[i].gate = n-i;
+        arr[i].father = i;
+        arr[i].n = 98-i;
     }
     //Calling heapSort function to sort the array
     heapSort(arr,n);
