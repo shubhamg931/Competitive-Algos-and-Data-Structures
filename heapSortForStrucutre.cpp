@@ -15,9 +15,9 @@ Swagat hai aap logo ka!!
 using namespace std;
 
 struct structure{
-    lld gate;
-    lld father;
-    lld n = 0;
+    lld gate = 0;
+    lld link1 = 0;
+    lld link2 = 0;
 };
 // To heapify a subtree rooted with node i which is
 // an index in arr[]. n is size of heap
@@ -65,7 +65,7 @@ void heapSort(structure arr[], lld n)
 void printArray(structure arr[], lld n)
 {
     for (int i=0; i<n; ++i)
-        cout<< "arr[i].gate: " << arr[i].gate << "arr[i].father: "<<arr[i].father<<"arr[i].n: "<<arr[i].n<<endl;
+        cout<< "arr[i].gate: " << arr[i].gate << "arr[i].link1: "<<arr[i].link1<<"arr[i].link2: "<<arr[i].link2<<endl;
 }
 
 int main(){
@@ -79,8 +79,8 @@ int main(){
     for(int i=0;i<10;i++)
     {
         arr[i].gate = n-i;
-        arr[i].father = i;
-        arr[i].n = 98-i;
+        arr[i].link1 = i;
+        arr[i].link2 = 98-i;
     }
     //Calling heapSort function to sort the array
     heapSort(arr,n);
