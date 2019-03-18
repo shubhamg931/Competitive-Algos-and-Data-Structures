@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//KADANE'S ALGORITHM
+
 int maxSubArraySum(int a[], int size)
 {
     int max_so_far = INT_MIN, max_ending_here = 0;
