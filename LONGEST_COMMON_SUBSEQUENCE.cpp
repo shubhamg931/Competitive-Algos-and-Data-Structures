@@ -2,7 +2,6 @@
 
 int max(int a, int b);
 
-/* Returns length of LCS for X[0..m-1], Y[0..n-1] */
 int lcs( char *X, char *Y, int m, int n )
 {
    int L[m+1][n+1];
@@ -29,13 +28,6 @@ int lcs( char *X, char *Y, int m, int n )
    return L[m][n];
 }
 
-/* Utility function to get max of 2 integers */
-int max(int a, int b)
-{
-    return (a > b)? a : b;
-}
-
-/* Driver program to test above function */
 int main() 
 { 
   char X[] = "AGGTAB"; 
