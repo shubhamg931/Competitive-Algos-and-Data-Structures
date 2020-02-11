@@ -19,7 +19,7 @@ typedef pair<lld, lld> pll;
 lld partition(lld arr[], lld l, lld r){
     lld pivot = arr[l];
     lld i = l;
-
+    
     for(lld j = l+1; j <= r; ++j){
         if(arr[j] < pivot){
             i++;
