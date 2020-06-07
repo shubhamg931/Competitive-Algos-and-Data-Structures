@@ -1,0 +1,9 @@
+Shortest path to vertex 0: 0
+Shortest path to vertex 1: 4
+Shortest path to vertex 2: 12
+Shortest path to vertex 3: 19
+Shortest path to vertex 4: 21
+Shortest path to vertex 5: 11
+Shortest path to vertex 6: 9
+Shortest path to vertex 7: 8
+Shortest path to vertex 8: 14
