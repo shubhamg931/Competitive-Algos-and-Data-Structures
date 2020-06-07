@@ -8,7 +8,7 @@
 using namespace __gnu_pbds; 
 using namespace std;
 
-#define INF				 0x3f3f3f3f 
+#define INF              0x3f3f3f3f 
 #define mod              1000000007
 #define MAXN             500005
 #define PI               3.14159265

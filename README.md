@@ -9,3 +9,4 @@ Points to Remember:
 	If 'a' and 'b' are two co-prime numbers then:
 		1. Largest number that can not be expressed in the form ax+by is ab-a-b
 		2. Count of numbers that can not be expressed in the form ax+by are (a-1)(b-1)/2
+4. Taking ceil of large numbers in C++ : (a+b-1)/b
